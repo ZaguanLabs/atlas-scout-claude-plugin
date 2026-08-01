@@ -1,0 +1,22 @@
+{
+  "name": "atlas-scout",
+  "owner": {
+    "name": "Zaguán Labs",
+    "email": "support@atlasscout.dev"
+  },
+  "description": "Atlas Scout integrations for Claude Code",
+  "plugins": [
+    {
+      "name": "atlas-scout",
+      "source": {
+        "source": "github",
+        "repo": "ZaguanLabs/atlas-scout-claude-plugin"
+      },
+      "description": "Local, read-only structural code navigation for Claude Code",
+      "homepage": "https://atlasscout.dev/docs",
+      "repository": "https://github.com/ZaguanLabs/atlas-scout-claude-plugin",
+      "category": "development",
+      "tags": ["mcp", "code-navigation", "symbols", "references", "local-index"]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "atlas-scout",
+  "displayName": "Atlas Scout",
+  "version": "1.0.0-preview.25",
+  "description": "Local, read-only structural code navigation for Claude Code",
+  "author": {
+    "name": "Zaguán Labs",
+    "email": "support@atlasscout.dev",
+    "url": "https://atlasscout.dev"
+  },
+  "homepage": "https://atlasscout.dev/docs",
+  "repository": "https://github.com/ZaguanLabs/atlas-scout-claude-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["mcp", "code-navigation", "symbols", "references", "local-index"]
+}

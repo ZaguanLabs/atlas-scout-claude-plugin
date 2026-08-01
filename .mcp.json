@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "atlas-scout": {
+      "type": "stdio",
+      "command": "atlas-scout",
+      "args": ["mcp"],
+      "alwaysLoad": true
+    }
+  }
+}
