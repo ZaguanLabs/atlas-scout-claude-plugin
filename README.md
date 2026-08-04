@@ -55,11 +55,16 @@ See [SETUP.md](SETUP.md) for troubleshooting and removal instructions.
 - A local `stdio` MCP connection that runs `atlas-scout mcp`
 - A concise code-navigation skill describing Scout's capabilities and coverage boundaries
 - Advisory `SessionStart` and `SubagentStart` context
+- Bounded advisory `PreToolUse` context when `Grep` or Bash `rg`/`grep` searches target code identifiers
 - Eager discovery metadata for the three navigation entry points
 
-The hooks add human-readable capability context only. They do not inspect conversation history,
-deny or approve tools, modify tool calls, execute repository code, or retain session state. Atlas
-Scout's MCP tools are annotated as read-only, non-destructive, idempotent, and closed-world.
+The hooks add human-readable capability context only. The `PreToolUse` hook locally examines the
+current `Grep` pattern or Bash command, stays silent for non-identifier searches and unindexed
+workspaces, and has a per-session notice limit. The hooks do not inspect conversation history, deny
+or approve tools, modify tool calls, or execute repository code. Temporary reminder counters contain
+only the sanitized session identifier and are removed by the operating system's normal temporary
+storage lifecycle. Atlas Scout's MCP tools are annotated as read-only, non-destructive, idempotent,
+and closed-world.
 
 ## Example prompts
 

@@ -1,5 +1,5 @@
 {
-  "description": "Describe Atlas Scout capabilities and coverage boundaries to Claude Code sessions and subagents",
+  "description": "Describe Atlas Scout capabilities and coverage boundaries to Claude Code sessions, subagents, and identifier searches",
   "hooks": {
     "SessionStart": [
       {
@@ -19,6 +19,17 @@
           {
             "type": "command",
             "command": "atlas-scout claude-code hook subagent-start"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Grep|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atlas-scout claude-code hook pre-tool-use"
           }
         ]
       }
