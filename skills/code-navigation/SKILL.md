@@ -1,6 +1,6 @@
 ---
 name: atlas-scout-code-navigation
-description: Use Atlas Scout for local structural code navigation involving definitions, symbols, callers, references, dependency paths, architecture, traces, or edit impact.
+description: Use Atlas Scout for local structural code navigation involving definitions, symbols, callers, references, dependency paths, architecture, traces, or edit impact. Use when asked where a symbol is defined, who calls or uses a function, what implements an interface, what breaks if code changes, or how a codebase is organized.
 ---
 
 # Atlas Scout code navigation
