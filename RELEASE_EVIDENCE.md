@@ -14,3 +14,10 @@ The wrapper payload matches the released Bit Lantern Claude integration. Native 
 
 The GitHub marketplace is the direct distribution path. Anthropic's directory submission
 is tracked separately; this document does not claim directory approval or publication.
+
+On 2026-10-26 the signed GitHub wrapper was pushed at commit
+`d26bafe6e64194e3f63d9175748f389c8520fb46`. The existing Anthropic directory update
+remains pending: the publication browser had no connected signed-in session, so no Preview 30
+portal submission, approval, or publication was observed. Publisher follow-up: update the existing
+submission at <https://platform.claude.com/plugins/submit> with this release tag, then record its
+actual review state. The direct GitHub marketplace remains usable.
