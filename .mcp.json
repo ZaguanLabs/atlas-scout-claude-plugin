@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "atlas-scout": {
+    "bitlantern": {
       "type": "stdio",
-      "command": "atlas-scout",
+      "command": "bitlantern",
       "args": ["mcp"],
       "alwaysLoad": true
     }

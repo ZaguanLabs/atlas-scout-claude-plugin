@@ -1,13 +1,14 @@
 {
-  "description": "Describe Atlas Scout capabilities and coverage boundaries to Claude Code sessions and subagents",
+  "description": "Describe Bit Lantern capabilities and coverage boundaries to Claude Code sessions and subagents",
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "startup|resume|clear|compact",
+        "matcher": "startup|resume|clear|compact|fork",
         "hooks": [
           {
             "type": "command",
-            "command": "atlas-scout claude-code hook session-start"
+            "command": "bitlantern claude-code hook session-start",
+            "timeout": 5
           }
         ]
       }
@@ -18,7 +19,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "atlas-scout claude-code hook subagent-start"
+            "command": "bitlantern claude-code hook subagent-start",
+            "timeout": 5
           }
         ]
       }
@@ -28,7 +30,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "atlas-scout claude-code hook user-prompt-submit"
+            "command": "bitlantern claude-code hook user-prompt-submit",
+            "timeout": 5
           }
         ]
       }
@@ -39,7 +42,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "atlas-scout claude-code hook pre-tool-use"
+            "command": "bitlantern claude-code hook pre-tool-use",
+            "timeout": 5
           }
         ]
       }

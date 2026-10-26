@@ -1,13 +1,13 @@
 {
-  "name": "atlas-scout",
+  "name": "bitlantern",
   "owner": {
     "name": "Zaguán Labs",
     "email": "support@atlasscout.dev"
   },
-  "description": "Atlas Scout integrations for Claude Code",
+  "description": "Bit Lantern integrations for Claude Code",
   "plugins": [
     {
-      "name": "atlas-scout",
+      "name": "bitlantern",
       "source": {
         "source": "github",
         "repo": "ZaguanLabs/atlas-scout-claude-plugin"

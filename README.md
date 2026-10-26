@@ -1,32 +1,31 @@
-# Atlas Scout for Claude Code
+# Bit Lantern for Claude Code
 
-Atlas Scout is a local, read-only MCP server that gives Claude Code indexed definitions, exact
+Bit Lantern is a local, read-only MCP server that gives Claude Code indexed definitions, exact
 source ranges, references, static call relationships, architecture summaries, and bounded edit
 impact for source repositories.
 
-This repository contains the inspectable Claude plugin wrapper. The separately installed Atlas
-Scout runtime remains proprietary software under the Atlas Scout license. Installing the plugin
+This repository contains the inspectable Claude plugin wrapper. The separately installed Bit Lantern runtime remains proprietary software under the Bit Lantern license. Installing the plugin
 does not download or install the runtime, run repository code, or send source code to Zaguán Labs.
 
 ## Requirements
 
 - Claude Code with plugin support
-- A supported Atlas Scout installation whose `atlas-scout` executable is on `PATH`
-- An unmanaged or organization-approved workstation that permits the Atlas Scout preview
+- A supported Bit Lantern installation whose `bitlantern` executable is on `PATH`
+- An unmanaged or organization-approved workstation that permits the Bit Lantern preview
 
-Atlas Scout previews for macOS and Windows do not yet carry Apple or Microsoft publisher
+Bit Lantern previews for macOS and Windows do not yet carry Apple or Microsoft publisher
 signatures. Review the [installation and platform-safety documentation](https://atlasscout.dev/docs)
 before installing the runtime. Do not weaken operating-system or organization security controls.
 
 ## Setup
 
-Install and verify the Atlas Scout runtime first. The supported installer is published at
+Install and verify the Bit Lantern runtime first. The supported installer is published at
 <https://atlasscout.dev/install.sh>; signed release metadata, checksums, provenance, and manual
 verification guidance are linked from <https://atlasscout.dev/docs>.
 
 ```bash
-atlas-scout --version
-atlas-scout doctor --workspace /absolute/path/to/project
+bitlantern --version
+bitlantern doctor --workspace /absolute/path/to/project
 ```
 
 To install directly from the Zaguán Labs marketplace while the community-directory review is
@@ -34,25 +33,25 @@ pending:
 
 ```bash
 claude plugin marketplace add ZaguanLabs/atlas-scout-claude-plugin --scope user
-claude plugin install atlas-scout@atlas-scout --scope user
+claude plugin install bitlantern@bitlantern --scope user
 ```
 
 After directory publication, users can install from Anthropic's automatically available official
 marketplace:
 
 ```text
-/plugin install atlas-scout@claude-plugins-official
+/plugin install bitlantern@claude-plugins-official
 ```
 
 Start a new Claude Code session after installation. Run `/mcp` to confirm that the plugin-provided
-`atlas-scout` server is connected. Remove or disable any duplicate manually registered Atlas Scout
+`bitlantern` server is connected. Remove or disable any duplicate manually registered Bit Lantern
 MCP server so Claude Code starts only one copy.
 
 See [SETUP.md](SETUP.md) for troubleshooting and removal instructions.
 
 ## What the plugin provides
 
-- A local `stdio` MCP connection that runs `atlas-scout mcp`
+- A local `stdio` MCP connection that runs `bitlantern mcp`
 - A concise code-navigation skill describing Scout's capabilities and coverage boundaries
 - Advisory `SessionStart`, `SubagentStart`, and bounded `UserPromptSubmit` context
 - Bounded advisory `PreToolUse` context when `Grep` or Bash `rg`/`grep` searches target code identifiers
@@ -65,7 +64,7 @@ current `Grep` pattern or Bash command, stays silent for non-identifier searches
 workspaces, and has a per-session notice limit. The hooks do not inspect conversation history, deny
 or approve tools, modify tool calls, or execute repository code. Temporary reminder counters
 contain only the sanitized session identifier and are removed by the operating system's normal
-temporary storage lifecycle. Atlas Scout's MCP tools are annotated as read-only, non-destructive,
+temporary storage lifecycle. Bit Lantern's MCP tools are annotated as read-only, non-destructive,
 idempotent, and closed-world.
 
 ## Example prompts
@@ -82,10 +81,10 @@ as exhaustive.
 
 ## Data access
 
-Atlas Scout reads source files in the workspace selected by Claude Code and writes a disposable
+Bit Lantern reads source files in the workspace selected by Claude Code and writes a disposable
 SQLite index beneath that workspace. It sends navigation results to Claude Code because that is the
-plugin's requested function. Atlas Scout does not transmit source code, repository paths, symbols,
-queries, tool calls, editor state, Git remotes, or index metrics to the Atlas Scout licensing
+plugin's requested function. Bit Lantern does not transmit source code, repository paths, symbols,
+queries, tool calls, editor state, Git remotes, or index metrics to the Bit Lantern licensing
 service.
 
 The runtime does not execute repository code, hooks, package scripts, builds, or tests. A Free
@@ -94,7 +93,7 @@ installations may perform asynchronous license refreshes as described in the pri
 
 ## Privacy Policy
 
-The Atlas Scout privacy policy describes local indexing, data sent to the connected coding agent,
+The Bit Lantern privacy policy describes local indexing, data sent to the connected coding agent,
 optional account and licensing data, storage, retention, third-party processing, and contact
 details: <https://atlasscout.dev/legal/privacy>.
 
@@ -112,7 +111,7 @@ in a public support request.
 
 ## Licensing boundary
 
-The Claude plugin wrapper and the Atlas Scout runtime are separate works. The public repository's
-license applies only to the plugin wrapper files. The Atlas Scout executable, product source,
+The Claude plugin wrapper and the Bit Lantern runtime are separate works. The public repository's
+license applies only to the plugin wrapper files. The Bit Lantern executable, product source,
 documentation shipped with the runtime, and other product materials remain governed by their
 separate proprietary terms and EULA.

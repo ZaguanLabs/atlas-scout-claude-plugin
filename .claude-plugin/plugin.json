@@ -1,7 +1,7 @@
 {
-  "name": "atlas-scout",
-  "displayName": "Atlas Scout",
-  "version": "1.0.0-preview.29",
+  "name": "bitlantern",
+  "displayName": "Bit Lantern",
+  "version": "1.0.0-preview.30",
   "description": "Local, read-only structural code navigation for Claude Code",
   "author": {
     "name": "Zaguán Labs",
